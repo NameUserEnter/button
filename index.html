@@ -1,0 +1,32 @@
+<html>
+<body>
+<button id="win" type="button">
+  виграти
+</button>
+<button id="loser" type="button">
+  програти
+</button>
+</body>
+<script>
+
+  function randomIk(min, max) {
+    return Math.floor(Math.random() * (max - min )) + min;
+  }
+  document.getElementById("loser").addEventListener("click",funAlert);
+
+  function funAlert(){
+    alert("нехай щастить");
+  }
+
+  var winer = document.getElementById("win");
+  winer.style.position = "absolute";
+
+
+  document.addEventListener('mouseover', function(mouse) {
+            winer.style.left = randomIk(300, 600) + 'px';
+            winer.style.top  = randomIk(300, 600) + 'px';
+          }
+  );
+  
+</script>
+</html>
